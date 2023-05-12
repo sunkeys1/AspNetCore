@@ -1,0 +1,2 @@
+# AspNetCore
+ Trying AspNetCore soo
