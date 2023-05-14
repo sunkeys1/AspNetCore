@@ -9,8 +9,11 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+//builder.Configuration.AddConfiguration()
 
 var app = builder.Build();
+
+//public string ConnectionString { get; set; }
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -19,6 +22,7 @@ if (app.Environment.IsDevelopment())
    
     app.UseSwaggerUI();
 }
+
 
 app.UseHttpsRedirection();
 
