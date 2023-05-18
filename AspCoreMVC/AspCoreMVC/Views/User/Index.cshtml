@@ -1,0 +1,47 @@
+﻿@model List<User>
+<div class="container">
+    <div class="row pt-4 pb-2">
+        <div class="col-6">
+            <h1 class="text-primary">
+                Users List
+            </h1>
+        </div>
+        <div class="col-6 text-end">
+            <a asp-controller="" asp-action="" class="btn btn-primary">
+                Add New User
+            </a>
+
+        </div>
+    </div>
+
+    <table class="table table-bordered table-striped">
+        <tr>
+            <thead class="text-center">
+            <th class="table-warning">
+                User Login
+            </th>
+            <th class="table-danger">
+                User Password
+            </th>
+            <th class="table-info">
+                Created
+            </th>
+            <th class="table-secondary">
+                State
+            </th>
+            </thead>
+            <tbody class="text-center">
+                @foreach(var obj in Model)
+                {
+                    <tr>
+                        <td>@obj.Login</td>
+                        <td>@obj.Password</td>
+                        <td>@obj.Created</td>
+                        <td>@obj.UserState</td>
+                        
+                    </tr>
+                }
+            </tbody>
+        </tr>
+    </table>
+</div>
