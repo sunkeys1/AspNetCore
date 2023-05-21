@@ -19,7 +19,9 @@ namespace AspCoreMVC.Models
         public string Password { get; set; }
         public DateTime Created { get; set; }
         public int GroupId { get; set; }
-        public string UserState { get; set; }
+        
+        [DisplayName("State")]
+        public string? UserState { get; set; }
 
     }
 }

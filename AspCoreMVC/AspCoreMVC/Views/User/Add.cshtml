@@ -13,7 +13,7 @@
         </div>
         <div class="mg-3 row p-1">
             <label asp-for="Password" class="p-0"></label>
-            <input asp-for="Password"  class="form-control"/>
+            <input asp-for="Password"  class="form-control"/>                       @*type="password"*@
             <span asp-validation-for="Password" class="text-danger"></span>
         </div>
         <div class="row">
@@ -30,3 +30,10 @@
         <button type="submit" class="btn btn-primary mt-4 btn-lg float-end form-control" style="width:150px">Add</button>
     </div>
 </form> 
+
+@section Scripts{
+    @{
+        <partial name ="_ValidationScriptsPartial"/>
+    }
+
+}
