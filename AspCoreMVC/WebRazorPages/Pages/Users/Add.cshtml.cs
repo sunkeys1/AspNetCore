@@ -24,6 +24,7 @@ namespace WebRazorPages.Pages.Users
             User.GroupId = 2;
             _db.Users.Add(User);
             _db.SaveChanges();
+            TempData["success"] = "User added successfully";
             return RedirectToPage("Index");
         }
     }

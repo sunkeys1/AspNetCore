@@ -31,7 +31,7 @@ namespace WebRazorPages.Pages.Users
             }
             _db.Users.Remove(obj);
             _db.SaveChanges();
-            //TempData["success"] = "User deleted successfully";
+            TempData["success"] = "User deleted successfully";
             return RedirectToPage("Index");
         }
     }

@@ -27,7 +27,7 @@ namespace WebRazorPages.Pages.Users
             {  
                 _db.Users.Update(User);
                 _db.SaveChanges();
-                //TempData["success"] = "User updated successfully";
+                TempData["success"] = "User updated successfully";
                 return RedirectToPage("Index");
             }
             return Page();
