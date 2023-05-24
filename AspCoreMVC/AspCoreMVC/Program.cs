@@ -1,4 +1,4 @@
-using AspCoreMVC.Data;
+using AspCore.DataAccess.Data;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);

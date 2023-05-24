@@ -1,0 +1,12 @@
+G:\AspNetCore\AspCoreMVC\AspCore.Utility\bin\Debug\net6.0\AspCore.Utility.deps.json
+G:\AspNetCore\AspCoreMVC\AspCore.Utility\bin\Debug\net6.0\AspCore.Utility.dll
+G:\AspNetCore\AspCoreMVC\AspCore.Utility\bin\Debug\net6.0\AspCore.Utility.pdb
+G:\AspNetCore\AspCoreMVC\AspCore.Utility\obj\Debug\net6.0\AspCore.Utility.csproj.AssemblyReference.cache
+G:\AspNetCore\AspCoreMVC\AspCore.Utility\obj\Debug\net6.0\AspCore.Utility.GeneratedMSBuildEditorConfig.editorconfig
+G:\AspNetCore\AspCoreMVC\AspCore.Utility\obj\Debug\net6.0\AspCore.Utility.AssemblyInfoInputs.cache
+G:\AspNetCore\AspCoreMVC\AspCore.Utility\obj\Debug\net6.0\AspCore.Utility.AssemblyInfo.cs
+G:\AspNetCore\AspCoreMVC\AspCore.Utility\obj\Debug\net6.0\AspCore.Utility.csproj.CoreCompileInputs.cache
+G:\AspNetCore\AspCoreMVC\AspCore.Utility\obj\Debug\net6.0\AspCore.Utility.dll
+G:\AspNetCore\AspCoreMVC\AspCore.Utility\obj\Debug\net6.0\refint\AspCore.Utility.dll
+G:\AspNetCore\AspCoreMVC\AspCore.Utility\obj\Debug\net6.0\AspCore.Utility.pdb
+G:\AspNetCore\AspCoreMVC\AspCore.Utility\obj\Debug\net6.0\ref\AspCore.Utility.dll

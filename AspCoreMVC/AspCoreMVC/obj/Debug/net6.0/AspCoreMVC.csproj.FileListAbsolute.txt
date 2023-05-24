@@ -282,3 +282,9 @@ G:\AspNetCore\AspCoreMVC\AspCoreMVC\bin\Debug\net6.0\runtimes\unix\lib\net6.0\Sy
 G:\AspNetCore\AspCoreMVC\AspCoreMVC\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
 G:\AspNetCore\AspCoreMVC\AspCoreMVC\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 G:\AspNetCore\AspCoreMVC\AspCoreMVC\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+G:\AspNetCore\AspCoreMVC\AspCoreMVC\bin\Debug\net6.0\AspCore.DataAccess.dll
+G:\AspNetCore\AspCoreMVC\AspCoreMVC\bin\Debug\net6.0\AspCore.Models.dll
+G:\AspNetCore\AspCoreMVC\AspCoreMVC\bin\Debug\net6.0\AspCore.Utility.dll
+G:\AspNetCore\AspCoreMVC\AspCoreMVC\bin\Debug\net6.0\AspCore.DataAccess.pdb
+G:\AspNetCore\AspCoreMVC\AspCoreMVC\bin\Debug\net6.0\AspCore.Models.pdb
+G:\AspNetCore\AspCoreMVC\AspCoreMVC\bin\Debug\net6.0\AspCore.Utility.pdb

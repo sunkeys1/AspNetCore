@@ -8,6 +8,9 @@
     ".NETCoreApp,Version=v6.0": {
       "AspCoreMVC/1.0.0": {
         "dependencies": {
+          "AspCore.DataAccess": "1.0.0",
+          "AspCore.Models": "1.0.0",
+          "AspCore.Utility": "1.0.0",
           "Microsoft.EntityFrameworkCore": "7.0.5",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.5",
           "Microsoft.EntityFrameworkCore.Tools": "7.0.5",
@@ -2418,6 +2421,27 @@
           "System.Threading": "4.3.0",
           "System.Xml.ReaderWriter": "4.3.0"
         }
+      },
+      "AspCore.DataAccess/1.0.0": {
+        "dependencies": {
+          "AspCore.Models": "1.0.0",
+          "AspCore.Utility": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "7.0.5",
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.5"
+        },
+        "runtime": {
+          "AspCore.DataAccess.dll": {}
+        }
+      },
+      "AspCore.Models/1.0.0": {
+        "runtime": {
+          "AspCore.Models.dll": {}
+        }
+      },
+      "AspCore.Utility/1.0.0": {
+        "runtime": {
+          "AspCore.Utility.dll": {}
+        }
       }
     }
   },
@@ -3700,6 +3724,21 @@
       "sha512": "sha512-5zJ0XDxAIg8iy+t4aMnQAu0MqVbqyvfoUVl1yDV61xdo3Vth45oA2FoY4pPkxYAH5f8ixpmTqXeEIya95x0aCQ==",
       "path": "system.xml.xdocument/4.3.0",
       "hashPath": "system.xml.xdocument.4.3.0.nupkg.sha512"
+    },
+    "AspCore.DataAccess/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AspCore.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AspCore.Utility/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

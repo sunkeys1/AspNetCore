@@ -1,8 +1,8 @@
-﻿using AspCoreMVC.Data;
-using AspCoreMVC.Models;
+﻿using AspCore.DataAccess.Data;
+using AspCore.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace AspCoreMVC.Controllers
+namespace AspCore.Controllers
 {
     
     public class UserController : Controller

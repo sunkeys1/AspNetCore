@@ -3242,6 +3242,42 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
+      },
+      "AspCore.DataAccess/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "AspCore.Models": "1.0.0",
+          "AspCore.Utility": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "7.0.5",
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.5"
+        },
+        "compile": {
+          "bin/placeholder/AspCore.DataAccess.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AspCore.DataAccess.dll": {}
+        }
+      },
+      "AspCore.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/AspCore.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AspCore.Models.dll": {}
+        }
+      },
+      "AspCore.Utility/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/AspCore.Utility.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AspCore.Utility.dll": {}
+        }
       }
     }
   },
@@ -10047,10 +10083,28 @@
         "system.xml.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xdocument.nuspec"
       ]
+    },
+    "AspCore.DataAccess/1.0.0": {
+      "type": "project",
+      "path": "../AspCore.DataAccess/AspCore.DataAccess.csproj",
+      "msbuildProject": "../AspCore.DataAccess/AspCore.DataAccess.csproj"
+    },
+    "AspCore.Models/1.0.0": {
+      "type": "project",
+      "path": "../AspCore.Models/AspCore.Models.csproj",
+      "msbuildProject": "../AspCore.Models/AspCore.Models.csproj"
+    },
+    "AspCore.Utility/1.0.0": {
+      "type": "project",
+      "path": "../AspCore.Utility/AspCore.Utility.csproj",
+      "msbuildProject": "../AspCore.Utility/AspCore.Utility.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "AspCore.DataAccess >= 1.0.0",
+      "AspCore.Models >= 1.0.0",
+      "AspCore.Utility >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 7.0.5",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.5",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.5",
@@ -10083,7 +10137,17 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "G:\\AspNetCore\\AspCoreMVC\\AspCore.DataAccess\\AspCore.DataAccess.csproj": {
+              "projectPath": "G:\\AspNetCore\\AspCoreMVC\\AspCore.DataAccess\\AspCore.DataAccess.csproj"
+            },
+            "G:\\AspNetCore\\AspCoreMVC\\AspCore.Models\\AspCore.Models.csproj": {
+              "projectPath": "G:\\AspNetCore\\AspCoreMVC\\AspCore.Models\\AspCore.Models.csproj"
+            },
+            "G:\\AspNetCore\\AspCoreMVC\\AspCore.Utility\\AspCore.Utility.csproj": {
+              "projectPath": "G:\\AspNetCore\\AspCoreMVC\\AspCore.Utility\\AspCore.Utility.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

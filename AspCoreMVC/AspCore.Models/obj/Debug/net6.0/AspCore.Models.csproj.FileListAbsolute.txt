@@ -1,0 +1,12 @@
+G:\AspNetCore\AspCoreMVC\AspCore.Models\bin\Debug\net6.0\AspCore.Models.deps.json
+G:\AspNetCore\AspCoreMVC\AspCore.Models\bin\Debug\net6.0\AspCore.Models.dll
+G:\AspNetCore\AspCoreMVC\AspCore.Models\bin\Debug\net6.0\AspCore.Models.pdb
+G:\AspNetCore\AspCoreMVC\AspCore.Models\obj\Debug\net6.0\AspCore.Models.csproj.AssemblyReference.cache
+G:\AspNetCore\AspCoreMVC\AspCore.Models\obj\Debug\net6.0\AspCore.Models.GeneratedMSBuildEditorConfig.editorconfig
+G:\AspNetCore\AspCoreMVC\AspCore.Models\obj\Debug\net6.0\AspCore.Models.AssemblyInfoInputs.cache
+G:\AspNetCore\AspCoreMVC\AspCore.Models\obj\Debug\net6.0\AspCore.Models.AssemblyInfo.cs
+G:\AspNetCore\AspCoreMVC\AspCore.Models\obj\Debug\net6.0\AspCore.Models.csproj.CoreCompileInputs.cache
+G:\AspNetCore\AspCoreMVC\AspCore.Models\obj\Debug\net6.0\AspCore.Models.dll
+G:\AspNetCore\AspCoreMVC\AspCore.Models\obj\Debug\net6.0\refint\AspCore.Models.dll
+G:\AspNetCore\AspCoreMVC\AspCore.Models\obj\Debug\net6.0\AspCore.Models.pdb
+G:\AspNetCore\AspCoreMVC\AspCore.Models\obj\Debug\net6.0\ref\AspCore.Models.dll
