@@ -22,7 +22,7 @@ namespace AspCore.DataAccess.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("AspCoreMVC.Models.User", b =>
+            modelBuilder.Entity("AspCore.Models.User", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -38,14 +38,15 @@ namespace AspCore.DataAccess.Migrations
 
                     b.Property<string>("Login")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
 
                     b.Property<string>("Password")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
 
                     b.Property<string>("UserState")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -56,7 +57,7 @@ namespace AspCore.DataAccess.Migrations
                         new
                         {
                             Id = 1,
-                            Created = new DateTime(2023, 5, 14, 16, 28, 53, 427, DateTimeKind.Local).AddTicks(6393),
+                            Created = new DateTime(2023, 5, 24, 15, 6, 51, 268, DateTimeKind.Local).AddTicks(9577),
                             GroupId = 2,
                             Login = "boris2020",
                             Password = "123boris123",
@@ -65,7 +66,7 @@ namespace AspCore.DataAccess.Migrations
                         new
                         {
                             Id = 2,
-                            Created = new DateTime(2023, 5, 6, 16, 28, 53, 427, DateTimeKind.Local).AddTicks(6411),
+                            Created = new DateTime(2023, 5, 16, 15, 6, 51, 268, DateTimeKind.Local).AddTicks(9596),
                             GroupId = 1,
                             Login = "superadmin",
                             Password = "adminadmin1",
@@ -74,11 +75,65 @@ namespace AspCore.DataAccess.Migrations
                         new
                         {
                             Id = 3,
-                            Created = new DateTime(2023, 5, 13, 16, 28, 53, 427, DateTimeKind.Local).AddTicks(6413),
+                            Created = new DateTime(2023, 5, 23, 15, 6, 51, 268, DateTimeKind.Local).AddTicks(9598),
                             GroupId = 2,
                             Login = "serejenka",
                             Password = "imserge222",
                             UserState = "Blocked"
+                        });
+                });
+
+            modelBuilder.Entity("AspCore.Models.UserGroup", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("UsersGroup");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Code = "Active",
+                            CreatedDate = new DateTime(2023, 5, 24, 15, 6, 51, 268, DateTimeKind.Local).AddTicks(9766),
+                            Description = "CSGO Lovers"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Code = "Blocked",
+                            CreatedDate = new DateTime(2023, 5, 21, 15, 6, 51, 268, DateTimeKind.Local).AddTicks(9770),
+                            Description = "Data miners"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Code = "Super Active",
+                            CreatedDate = new DateTime(2023, 5, 6, 15, 6, 51, 268, DateTimeKind.Local).AddTicks(9773),
+                            Description = "Minecraft Enjoyers"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Code = "Active",
+                            CreatedDate = new DateTime(2023, 5, 11, 15, 6, 51, 268, DateTimeKind.Local).AddTicks(9775),
+                            Description = "Starcraft Koreans"
                         });
                 });
 #pragma warning restore 612, 618

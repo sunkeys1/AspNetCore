@@ -1,0 +1,41 @@
+﻿@model UserGroup
+<h1>Edit User Group</h1>
+<form method="post">
+    <input asp-for="Id" hidden/>
+    <input asp-for="CreatedDate" hidden/>
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary"></h2>
+            <hr/>
+        </div>
+        <div class="mg-3 row p-1">
+            <label asp-for="Description" class="p-0"></label>
+            <input asp-for="Description"  class="form-control"/>
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+        <div class="mg-3 row p-1">
+            <label asp-for="Code" class="p-0"></label>
+            <input asp-for="Code" class="form-control"/>
+            <span asp-validation-for="Code" class="text-danger"></span>
+        </div>
+        <div class="row">
+            <div class="col-6">
+
+            </div>
+            <div >
+
+            </div>
+        </div>
+        <a asp-controller="UserGroup" asp-action="Index" class="btn btn-secondary mt-4 btn-lg float-end" style="width:150px">
+            Back
+        </a>
+        <button type="submit" class="btn btn-primary mt-4 btn-lg float-end form-control" style="width:150px">Update</button>
+    </div>
+</form> 
+
+@section Scripts{
+    @{
+        <partial name ="_ValidationScriptsPartial"/>
+    }
+
+}

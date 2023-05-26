@@ -12,10 +12,14 @@ namespace AspCore.DataAccess.Repository
     {
         private ApplicationDbContext _db;
         public IUserRepository User { get; private set; }
+
+        public IUserGroupRepository UserGroup { get; private set; }  
+
         public UnitOfWork(ApplicationDbContext db)
         {
             _db = db;
             User = new UserRepository(_db);
+            UserGroup = new UserGroupRepository(_db);
 
         }
         
