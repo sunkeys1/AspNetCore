@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "RZ0m0CP2xRNrgKXbnb3SJwZk9GzPDhFXzJQCG1JK/XnuZUXRoSdsrhB3BTsB7s4tCOaqgYCushYNlDy5fM1l7Q==",
+  "dgSpecHash": "nM64BG+EYZJuGbxBKxrRntmgxEis2AWyaJsMWGOOhiipMgs7t0fdAJo03abJo7VCdw0brDrytdhgio0IZv7Xrw==",
   "success": true,
   "projectFilePath": "G:\\AspNetCore\\AspCoreMVC\\DependencyInjectionTest\\DependencyInjectionTest.csproj",
   "expectedPackageFiles": [],

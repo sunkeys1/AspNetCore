@@ -57,7 +57,7 @@ namespace AspCore.DataAccess.Migrations
                         new
                         {
                             Id = 1,
-                            Created = new DateTime(2023, 5, 24, 15, 6, 51, 268, DateTimeKind.Local).AddTicks(9577),
+                            Created = new DateTime(2023, 5, 30, 18, 27, 29, 503, DateTimeKind.Local).AddTicks(1531),
                             GroupId = 2,
                             Login = "boris2020",
                             Password = "123boris123",
@@ -66,7 +66,7 @@ namespace AspCore.DataAccess.Migrations
                         new
                         {
                             Id = 2,
-                            Created = new DateTime(2023, 5, 16, 15, 6, 51, 268, DateTimeKind.Local).AddTicks(9596),
+                            Created = new DateTime(2023, 5, 22, 18, 27, 29, 503, DateTimeKind.Local).AddTicks(1549),
                             GroupId = 1,
                             Login = "superadmin",
                             Password = "adminadmin1",
@@ -75,7 +75,7 @@ namespace AspCore.DataAccess.Migrations
                         new
                         {
                             Id = 3,
-                            Created = new DateTime(2023, 5, 23, 15, 6, 51, 268, DateTimeKind.Local).AddTicks(9598),
+                            Created = new DateTime(2023, 5, 29, 18, 27, 29, 503, DateTimeKind.Local).AddTicks(1550),
                             GroupId = 2,
                             Login = "serejenka",
                             Password = "imserge222",
@@ -92,7 +92,6 @@ namespace AspCore.DataAccess.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Code")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("CreatedDate")
@@ -100,9 +99,15 @@ namespace AspCore.DataAccess.Migrations
 
                     b.Property<string>("Description")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(25)
+                        .HasColumnType("nvarchar(25)");
+
+                    b.Property<int>("MemberId")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("MemberId");
 
                     b.ToTable("UsersGroup");
 
@@ -111,30 +116,45 @@ namespace AspCore.DataAccess.Migrations
                         {
                             Id = 1,
                             Code = "Active",
-                            CreatedDate = new DateTime(2023, 5, 24, 15, 6, 51, 268, DateTimeKind.Local).AddTicks(9766),
-                            Description = "CSGO Lovers"
+                            CreatedDate = new DateTime(2023, 5, 30, 18, 27, 29, 503, DateTimeKind.Local).AddTicks(1700),
+                            Description = "CSGO Lovers",
+                            MemberId = 1
                         },
                         new
                         {
                             Id = 2,
                             Code = "Blocked",
-                            CreatedDate = new DateTime(2023, 5, 21, 15, 6, 51, 268, DateTimeKind.Local).AddTicks(9770),
-                            Description = "Data miners"
+                            CreatedDate = new DateTime(2023, 5, 27, 18, 27, 29, 503, DateTimeKind.Local).AddTicks(1704),
+                            Description = "Data miners",
+                            MemberId = 1
                         },
                         new
                         {
                             Id = 3,
                             Code = "Super Active",
-                            CreatedDate = new DateTime(2023, 5, 6, 15, 6, 51, 268, DateTimeKind.Local).AddTicks(9773),
-                            Description = "Minecraft Enjoyers"
+                            CreatedDate = new DateTime(2023, 5, 12, 18, 27, 29, 503, DateTimeKind.Local).AddTicks(1705),
+                            Description = "Minecraft Enjoyers",
+                            MemberId = 2
                         },
                         new
                         {
                             Id = 4,
                             Code = "Active",
-                            CreatedDate = new DateTime(2023, 5, 11, 15, 6, 51, 268, DateTimeKind.Local).AddTicks(9775),
-                            Description = "Starcraft Koreans"
+                            CreatedDate = new DateTime(2023, 5, 17, 18, 27, 29, 503, DateTimeKind.Local).AddTicks(1707),
+                            Description = "Starcraft Koreans",
+                            MemberId = 3
                         });
+                });
+
+            modelBuilder.Entity("AspCore.Models.UserGroup", b =>
+                {
+                    b.HasOne("AspCore.Models.User", "User")
+                        .WithMany()
+                        .HasForeignKey("MemberId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
                 });
 #pragma warning restore 612, 618
         }

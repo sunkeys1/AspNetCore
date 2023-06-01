@@ -19,10 +19,10 @@ namespace AspCore.DataAccess.Data
                 new User { Id = 3, Login = "serejenka", Password = "imserge222", Created = DateTime.Now.AddDays(-3), GroupId = 2, UserState = "Blocked" }
                 );
             modelBuilder.Entity<UserGroup>().HasData(
-                new UserGroup { Id = 1, Code = "Active", Description = "CSGO Lovers", CreatedDate = DateTime.Now.AddDays(-2)},
-                new UserGroup { Id = 2, Code = "Blocked", Description = "Data miners", CreatedDate = DateTime.Now.AddDays(-5)},
-                new UserGroup { Id = 3, Code = "Super Active", Description = "Minecraft Enjoyers", CreatedDate = DateTime.Now.AddDays(-20)},
-                new UserGroup { Id = 4, Code = "Active", Description = "Starcraft Koreans", CreatedDate = DateTime.Now.AddDays(-15)}
+                new UserGroup { Id = 1, Code = "Active", Description = "CSGO Lovers", CreatedDate = DateTime.Now.AddDays(-2), MemberId = 1},
+                new UserGroup { Id = 2, Code = "Blocked", Description = "Data miners", CreatedDate = DateTime.Now.AddDays(-5), MemberId = 1},
+                new UserGroup { Id = 3, Code = "Super Active", Description = "Minecraft Enjoyers", CreatedDate = DateTime.Now.AddDays(-20), MemberId = 2},
+                new UserGroup { Id = 4, Code = "Active", Description = "Starcraft Koreans", CreatedDate = DateTime.Now.AddDays(-15), MemberId = 3}
 
                 );
         }

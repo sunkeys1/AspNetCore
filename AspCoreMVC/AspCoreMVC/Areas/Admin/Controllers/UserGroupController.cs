@@ -1,6 +1,9 @@
 ﻿using AspCore.DataAccess.Repository.IRepository;
 using AspCore.Models;
+using AspCore.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using System.Collections.Generic;
 
 namespace AspCoreMVC.Areas.Admin.Controllers
 {
@@ -15,28 +18,48 @@ namespace AspCoreMVC.Areas.Admin.Controllers
         public IActionResult Index()
         {
             List<UserGroup> objUserGroupList = _unitOfWork.UserGroup.GetAll().ToList();
+            
             return View(objUserGroupList);
         }
         public IActionResult Add()
         {
-            return View();
+            
+            //ViewBag.UserList = UserList;
+            //ViewData["UserList"] = UserList;
+            UserGroupVM userGroupVM = new()
+            {
+                UserList = _unitOfWork.User.GetAll().Select(u => new SelectListItem
+                {
+                    Text = u.Login,
+                    Value = u.Id.ToString()
+                }),
+                UserGroup = new UserGroup()
+            };
+            return View(userGroupVM);
         }
         [HttpPost]
-        public IActionResult Add(UserGroup obj)
+        public IActionResult Add(UserGroupVM userGroupVM)
         { 
 
             if (ModelState.IsValid)
             {
-                obj.CreatedDate = DateTime.Now;
-                obj.Code = "Active";
-                _unitOfWork.UserGroup.Add(obj);
+                userGroupVM.UserGroup.CreatedDate = DateTime.Now;
+                userGroupVM.UserGroup.Code = "Active";
+                _unitOfWork.UserGroup.Add(userGroupVM.UserGroup);
                 _unitOfWork.Save();
                 TempData["success"] = "User Group added successfully";
                 return RedirectToAction("Index");
             }
-            return View();
+            else
+            {
+                userGroupVM.UserList = _unitOfWork.User.GetAll().Select(u => new SelectListItem
+                {
+                    Text = u.Login,
+                    Value = u.Id.ToString()
+                });       
+                return View(userGroupVM);
+            } 
         }
-
         public IActionResult Edit(int? id)
         {
             if (id == null || id == 0)

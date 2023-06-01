@@ -288,3 +288,6 @@ G:\AspNetCore\AspCoreMVC\AspCoreMVC\bin\Debug\net6.0\AspCore.Utility.dll
 G:\AspNetCore\AspCoreMVC\AspCoreMVC\bin\Debug\net6.0\AspCore.DataAccess.pdb
 G:\AspNetCore\AspCoreMVC\AspCoreMVC\bin\Debug\net6.0\AspCore.Models.pdb
 G:\AspNetCore\AspCoreMVC\AspCoreMVC\bin\Debug\net6.0\AspCore.Utility.pdb
+G:\AspNetCore\AspCoreMVC\AspCoreMVC\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+G:\AspNetCore\AspCoreMVC\AspCoreMVC\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
+G:\AspNetCore\AspCoreMVC\AspCoreMVC\obj\Debug\net6.0\AspCoreMVC.MvcApplicationPartsAssemblyInfo.cs

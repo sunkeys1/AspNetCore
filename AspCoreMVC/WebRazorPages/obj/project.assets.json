@@ -10058,7 +10058,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Alegus\\.nuget\\packages\\": {}
+    "C:\\Users\\user\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -10066,11 +10066,11 @@
       "projectUniqueName": "G:\\AspNetCore\\AspCoreMVC\\WebRazorPages\\WebRazorPages.csproj",
       "projectName": "WebRazorPages",
       "projectPath": "G:\\AspNetCore\\AspCoreMVC\\WebRazorPages\\WebRazorPages.csproj",
-      "packagesPath": "C:\\Users\\Alegus\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
       "outputPath": "G:\\AspNetCore\\AspCoreMVC\\WebRazorPages\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Alegus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -10121,8 +10121,7 @@
           "net47",
           "net471",
           "net472",
-          "net48",
-          "net481"
+          "net48"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -10134,7 +10133,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.408\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
       }
     }
   }
