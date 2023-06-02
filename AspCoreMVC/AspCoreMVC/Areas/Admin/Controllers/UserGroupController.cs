@@ -21,47 +21,47 @@ namespace AspCoreMVC.Areas.Admin.Controllers
             
             return View(objUserGroupList);
         }
-        public IActionResult Add()
-        {
-
-            //ViewBag.UserList = UserList;
-            //ViewData["UserList"] = UserList;
-            UserGroupVM userGroupVM = new()
-            {
-                UserList = _unitOfWork.User.GetAll().Select(u => new SelectListItem               // объединяем create(add) с update
-                {
-                    Text = u.Login,
-                    Value = u.Id.ToString()
-                }),
-                UserGroup = new UserGroup()
-            };
-            return View(userGroupVM);
-        }
-        //public IActionResult Upadd(int? id)  // Upsert  (UpdateInsert) объединяем 2 в 1 
+        //public IActionResult Add()
         //{
+
+        //    //ViewBag.UserList = UserList;
+        //    //ViewData["UserList"] = UserList;
         //    UserGroupVM userGroupVM = new()
         //    {
-        //        UserList = _unitOfWork.User.GetAll().Select(u => new SelectListItem   
+        //        UserList = _unitOfWork.User.GetAll().Select(u => new SelectListItem               // объединяем create(add) с update
         //        {
         //            Text = u.Login,
         //            Value = u.Id.ToString()
         //        }),
         //        UserGroup = new UserGroup()
         //    };
-        //    if(id == null || id == 0)
-        //    {
-        //        // add (create)
-        //        return View(userGroupVM);
-        //    }
-        //    else
-        //    {
-        //        // update
-        //        userGroupVM.UserGroup = _unitOfWork.UserGroup.Get(u => u.Id == id);
-        //        return View(userGroupVM);
-        //    }
+        //    return View(userGroupVM);
         //}
+        public IActionResult Upadd(int? id)  // Upsert  (UpdateInsert) объединяем 2 в 1 
+        {
+            UserGroupVM userGroupVM = new()
+            {
+                UserList = _unitOfWork.User.GetAll().Select(u => new SelectListItem
+                {
+                    Text = u.Login,
+                    Value = u.Id.ToString()
+                }),
+                UserGroup = new UserGroup()
+            };
+            if (id == null || id == 0)
+            {
+                // add (create)
+                return View(userGroupVM);
+            }
+            else
+            {
+                // update
+                userGroupVM.UserGroup = _unitOfWork.UserGroup.Get(u => u.Id == id);
+                return View(userGroupVM);
+            }
+        }
         [HttpPost]
-        public IActionResult Add(UserGroupVM userGroupVM)   // было: public IActionResult Add(UserGroupVM userGroupVM)
+        public IActionResult Upadd(UserGroupVM userGroupVM, IFormFile? file)   // было: public IActionResult Add(UserGroupVM userGroupVM)
         { 
 
             if (ModelState.IsValid)
@@ -84,35 +84,35 @@ namespace AspCoreMVC.Areas.Admin.Controllers
                 return View(userGroupVM);
             } 
         }
-        public IActionResult Edit(int? id)
-        {
-            if (id == null || id == 0)
-            {
-                return NotFound();
-            }
-            UserGroup? userGroupFromDb = _unitOfWork.UserGroup.Get(u => u.Id == id);
-            //User? userFromDb1 = _db.Users.FirstOrDefault(a => a.Id == id);            
-            //User? userFromDb2 = _db.Users.Where(a => a.Id == id).FirstOrDefault();    //аналогичны верхнему
-            if (userGroupFromDb == null)
-            {
-                return NotFound();
-            }
-            return View(userGroupFromDb);
-        }
-        [HttpPost]
-        public IActionResult Edit(UserGroup obj)
-        {
+        //public IActionResult Edit(int? id)                    // убираем Edit тк мы объединили его с Create(Add) (Upadd)
+        //{
+        //    if (id == null || id == 0)
+        //    {
+        //        return NotFound();
+        //    }
+        //    UserGroup? userGroupFromDb = _unitOfWork.UserGroup.Get(u => u.Id == id);
+        //    //User? userFromDb1 = _db.Users.FirstOrDefault(a => a.Id == id);            
+        //    //User? userFromDb2 = _db.Users.Where(a => a.Id == id).FirstOrDefault();    //аналогичны верхнему
+        //    if (userGroupFromDb == null)
+        //    {
+        //        return NotFound();
+        //    }
+        //    return View(userGroupFromDb);
+        //}
+        //[HttpPost]
+        //public IActionResult Edit(UserGroup obj)
+        //{
 
-            if (ModelState.IsValid)
-            {
-                //obj.Created = _db.  как вернуть время из бд чтобы не сбрасывалось в 0000 ?? !! => solution: добавить <input asp-for="что хотим передать" hidden/> в Edit в нашем случае (хз норм ли это)
-                _unitOfWork.UserGroup.Update(obj);
-                _unitOfWork.Save();
-                TempData["success"] = "User Group updated successfully";
-                return RedirectToAction("Index");
-            }
-            return View();
-        }
+        //    if (ModelState.IsValid)
+        //    {
+        //        //obj.Created = _db.  как вернуть время из бд чтобы не сбрасывалось в 0000 ?? !! => solution: добавить <input asp-for="что хотим передать" hidden/> в Edit в нашем случае (хз норм ли это)
+        //        _unitOfWork.UserGroup.Update(obj);
+        //        _unitOfWork.Save();
+        //        TempData["success"] = "User Group updated successfully";
+        //        return RedirectToAction("Index");
+        //    }
+        //    return View();
+        //}
 
         public IActionResult Delete(int? id)
         {

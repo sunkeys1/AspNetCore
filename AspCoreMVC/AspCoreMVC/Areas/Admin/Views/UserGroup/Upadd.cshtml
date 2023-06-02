@@ -1,0 +1,56 @@
+﻿@model UserGroupVM
+<h1>@(Model.UserGroup.Id!=0?"Edit":"Create") User Group</h1>
+<form method="post" enctype="multipart/form-data">
+    <input asp-for="UserGroup.Id" hidden />
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary"></h2> 
+            <hr/>
+        </div>
+        <div class="mg-3 row p-1">
+            <label asp-for="UserGroup.Description" class="p-0"></label>
+            <input asp-for="UserGroup.Description"  class="form-control"/>
+            <span asp-validation-for="UserGroup.Description" class="text-danger"></span>
+        </div>
+        <div class="mg-3 row p-1">
+            <label asp-for="UserGroup.MemberId" class="p-0"></label>
+            <select asp-for="@Model.UserGroup.MemberId" asp-items="@Model.UserList">
+                <option disabled selected>--Select User--</option>
+            </select>
+            <label asp-for="UserGroup.MemberId" class="p-0"/>
+            <span asp-validation-for="UserGroup.MemberId" class="text-danger"></span>
+        </div>
+        <div class="mg-3 row p-1">
+            <label asp-for="UserGroup.ImageUrl" class="p-0"></label>
+            <input type="file" class="form-control text-secondary"></input>
+            
+        </div>
+        <div class="row">
+            <div class="col-6">
+
+            </div>
+            <div >
+
+            </div>
+        </div>
+        <a asp-controller="UserGroup" asp-action="Index" class="btn btn-secondary mt-4 btn-lg float-end" style="width:150px">
+            Back
+        </a>
+        @if(Model.UserGroup.Id != 0)
+        {
+            <button type="submit" class="btn btn-primary mt-4 btn-lg float-end form-control" style="width:150px">Update</button>
+        }
+        else
+        {
+            <button type="submit" class="btn btn-primary mt-4 btn-lg float-end form-control" style="width:150px">Add</button>
+        }
+        
+    </div>
+</form> 
+
+@section Scripts{
+    @{
+    <partial name ="_ValidationScriptsPartial"/>
+    }
+
+}
