@@ -57,7 +57,7 @@ namespace AspCore.DataAccess.Migrations
                         new
                         {
                             Id = 1,
-                            Created = new DateTime(2023, 5, 30, 18, 27, 29, 503, DateTimeKind.Local).AddTicks(1531),
+                            Created = new DateTime(2023, 5, 31, 14, 42, 34, 540, DateTimeKind.Local).AddTicks(7824),
                             GroupId = 2,
                             Login = "boris2020",
                             Password = "123boris123",
@@ -66,7 +66,7 @@ namespace AspCore.DataAccess.Migrations
                         new
                         {
                             Id = 2,
-                            Created = new DateTime(2023, 5, 22, 18, 27, 29, 503, DateTimeKind.Local).AddTicks(1549),
+                            Created = new DateTime(2023, 5, 23, 14, 42, 34, 540, DateTimeKind.Local).AddTicks(7845),
                             GroupId = 1,
                             Login = "superadmin",
                             Password = "adminadmin1",
@@ -75,7 +75,7 @@ namespace AspCore.DataAccess.Migrations
                         new
                         {
                             Id = 3,
-                            Created = new DateTime(2023, 5, 29, 18, 27, 29, 503, DateTimeKind.Local).AddTicks(1550),
+                            Created = new DateTime(2023, 5, 30, 14, 42, 34, 540, DateTimeKind.Local).AddTicks(7849),
                             GroupId = 2,
                             Login = "serejenka",
                             Password = "imserge222",
@@ -102,6 +102,9 @@ namespace AspCore.DataAccess.Migrations
                         .HasMaxLength(25)
                         .HasColumnType("nvarchar(25)");
 
+                    b.Property<string>("ImageUrl")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("MemberId")
                         .HasColumnType("int");
 
@@ -116,32 +119,36 @@ namespace AspCore.DataAccess.Migrations
                         {
                             Id = 1,
                             Code = "Active",
-                            CreatedDate = new DateTime(2023, 5, 30, 18, 27, 29, 503, DateTimeKind.Local).AddTicks(1700),
+                            CreatedDate = new DateTime(2023, 5, 31, 14, 42, 34, 540, DateTimeKind.Local).AddTicks(7991),
                             Description = "CSGO Lovers",
+                            ImageUrl = "",
                             MemberId = 1
                         },
                         new
                         {
                             Id = 2,
                             Code = "Blocked",
-                            CreatedDate = new DateTime(2023, 5, 27, 18, 27, 29, 503, DateTimeKind.Local).AddTicks(1704),
+                            CreatedDate = new DateTime(2023, 5, 28, 14, 42, 34, 540, DateTimeKind.Local).AddTicks(7995),
                             Description = "Data miners",
+                            ImageUrl = "",
                             MemberId = 1
                         },
                         new
                         {
                             Id = 3,
                             Code = "Super Active",
-                            CreatedDate = new DateTime(2023, 5, 12, 18, 27, 29, 503, DateTimeKind.Local).AddTicks(1705),
+                            CreatedDate = new DateTime(2023, 5, 13, 14, 42, 34, 540, DateTimeKind.Local).AddTicks(7997),
                             Description = "Minecraft Enjoyers",
+                            ImageUrl = "",
                             MemberId = 2
                         },
                         new
                         {
                             Id = 4,
                             Code = "Active",
-                            CreatedDate = new DateTime(2023, 5, 17, 18, 27, 29, 503, DateTimeKind.Local).AddTicks(1707),
+                            CreatedDate = new DateTime(2023, 5, 18, 14, 42, 34, 540, DateTimeKind.Local).AddTicks(8000),
                             Description = "Starcraft Koreans",
+                            ImageUrl = "",
                             MemberId = 3
                         });
                 });

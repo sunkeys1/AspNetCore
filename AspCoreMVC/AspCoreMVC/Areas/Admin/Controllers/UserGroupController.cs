@@ -23,12 +23,12 @@ namespace AspCoreMVC.Areas.Admin.Controllers
         }
         public IActionResult Add()
         {
-            
+
             //ViewBag.UserList = UserList;
             //ViewData["UserList"] = UserList;
             UserGroupVM userGroupVM = new()
             {
-                UserList = _unitOfWork.User.GetAll().Select(u => new SelectListItem
+                UserList = _unitOfWork.User.GetAll().Select(u => new SelectListItem               // объединяем create(add) с update
                 {
                     Text = u.Login,
                     Value = u.Id.ToString()
@@ -37,13 +37,37 @@ namespace AspCoreMVC.Areas.Admin.Controllers
             };
             return View(userGroupVM);
         }
+        //public IActionResult Upadd(int? id)  // Upsert  (UpdateInsert) объединяем 2 в 1 
+        //{
+        //    UserGroupVM userGroupVM = new()
+        //    {
+        //        UserList = _unitOfWork.User.GetAll().Select(u => new SelectListItem   
+        //        {
+        //            Text = u.Login,
+        //            Value = u.Id.ToString()
+        //        }),
+        //        UserGroup = new UserGroup()
+        //    };
+        //    if(id == null || id == 0)
+        //    {
+        //        // add (create)
+        //        return View(userGroupVM);
+        //    }
+        //    else
+        //    {
+        //        // update
+        //        userGroupVM.UserGroup = _unitOfWork.UserGroup.Get(u => u.Id == id);
+        //        return View(userGroupVM);
+        //    }
+        //}
         [HttpPost]
-        public IActionResult Add(UserGroupVM userGroupVM)
+        public IActionResult Add(UserGroupVM userGroupVM)   // было: public IActionResult Add(UserGroupVM userGroupVM)
         { 
 
             if (ModelState.IsValid)
             {
                 userGroupVM.UserGroup.CreatedDate = DateTime.Now;
+                
                 userGroupVM.UserGroup.Code = "Active";
                 _unitOfWork.UserGroup.Add(userGroupVM.UserGroup);
                 _unitOfWork.Save();

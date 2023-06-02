@@ -29,5 +29,7 @@ namespace AspCore.Models
         [ForeignKey("MemberId")]
         [ValidateNever]
         public User User { get; set; }
+        [ValidateNever]
+        public string? ImageUrl { get; set; }
     }
 }
