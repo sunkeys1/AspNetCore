@@ -11,9 +11,11 @@ namespace AspCoreMVC.Areas.Admin.Controllers
     public class UserGroupController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
-        public UserGroupController(IUnitOfWork unitOfWork)
+        private readonly IWebHostEnvironment _webHostEnvironment;
+        public UserGroupController(IUnitOfWork unitOfWork, IWebHostEnvironment webHostEnvironment)
         {
             _unitOfWork = unitOfWork;
+            _webHostEnvironment = webHostEnvironment;
         }
         public IActionResult Index()
         {
@@ -66,12 +68,34 @@ namespace AspCoreMVC.Areas.Admin.Controllers
 
             if (ModelState.IsValid)
             {
-                userGroupVM.UserGroup.CreatedDate = DateTime.Now;
+                string wwwRootPath = _webHostEnvironment.WebRootPath;
+                if(file != null)
+                {
+                    string fileName = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);
+                    string userGroupPath = Path.Combine(wwwRootPath, @"images\usergroup");
+
+
+                    using (var fileStream = new FileStream(Path.Combine(userGroupPath, fileName),FileMode.Create))
+                    {
+                        file.CopyTo(fileStream);
+                    }
+                    userGroupVM.UserGroup.ImageUrl = @"\images\usergroup\" + fileName; 
+                }
+                if(userGroupVM.UserGroup.Id == 0 || userGroupVM.UserGroup.Id == null)
+                {
+                    userGroupVM.UserGroup.CreatedDate = DateTime.Now;
+                    userGroupVM.UserGroup.Code = "Active";
+                    _unitOfWork.UserGroup.Add(userGroupVM.UserGroup);
+                    TempData["success"] = "User Group added successfully";
+                }
+                else
+                {
+                    _unitOfWork.UserGroup.Update(userGroupVM.UserGroup);
+                    TempData["success"] = "User Group updated successfully";
+                }
                 
-                userGroupVM.UserGroup.Code = "Active";
-                _unitOfWork.UserGroup.Add(userGroupVM.UserGroup);
                 _unitOfWork.Save();
-                TempData["success"] = "User Group added successfully";
+                
                 return RedirectToAction("Index");
             }
             else
@@ -84,6 +108,7 @@ namespace AspCoreMVC.Areas.Admin.Controllers
                 return View(userGroupVM);
             } 
         }
+        ///
         //public IActionResult Edit(int? id)                    // убираем Edit тк мы объединили его с Create(Add) (Upadd)
         //{
         //    if (id == null || id == 0)

@@ -2,6 +2,8 @@
 <h1>@(Model.UserGroup.Id!=0?"Edit":"Create") User Group</h1>
 <form method="post" enctype="multipart/form-data">
     <input asp-for="UserGroup.Id" hidden />
+    <input asp-for="UserGroup.CreatedDate" hidden/>
+    <input asp-for="UserGroup.Code" hidden/>
     <div class="border p-3 mt-4">
         <div class="row pb-2">
             <h2 class="text-primary"></h2> 
@@ -22,7 +24,7 @@
         </div>
         <div class="mg-3 row p-1">
             <label asp-for="UserGroup.ImageUrl" class="p-0"></label>
-            <input type="file" class="form-control text-secondary"></input>
+            <input type="file" name="file" class="form-control text-secondary"></input>
             
         </div>
         <div class="row">
