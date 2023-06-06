@@ -19,7 +19,7 @@ namespace AspCoreMVC.Areas.Admin.Controllers
         }
         public IActionResult Index()
         {
-            List<UserGroup> objUserGroupList = _unitOfWork.UserGroup.GetAll().ToList();
+            List<UserGroup> objUserGroupList = _unitOfWork.UserGroup.GetAll(includeProps:"User").ToList();
             
             return View(objUserGroupList);
         }
@@ -74,6 +74,15 @@ namespace AspCoreMVC.Areas.Admin.Controllers
                     string fileName = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);
                     string userGroupPath = Path.Combine(wwwRootPath, @"images\usergroup");
 
+                    if (!string.IsNullOrEmpty(userGroupVM.UserGroup.ImageUrl))
+                    {
+                        // delete old img
+                        var oldImgPath = Path.Combine(wwwRootPath, userGroupVM.UserGroup.ImageUrl.TrimStart('\\'));
+                        if (System.IO.File.Exists(oldImgPath))
+                        {
+                            System.IO.File.Delete(oldImgPath);
+                        }
+                    }
 
                     using (var fileStream = new FileStream(Path.Combine(userGroupPath, fileName),FileMode.Create))
                     {
@@ -161,6 +170,7 @@ namespace AspCoreMVC.Areas.Admin.Controllers
             {
                 NotFound();
             }
+
             _unitOfWork.UserGroup.Delete(obj);
             _unitOfWork.Save();
             TempData["success"] = "User Group deleted successfully";

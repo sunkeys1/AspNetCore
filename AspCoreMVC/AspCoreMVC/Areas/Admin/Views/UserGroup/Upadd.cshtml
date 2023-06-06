@@ -4,6 +4,7 @@
     <input asp-for="UserGroup.Id" hidden />
     <input asp-for="UserGroup.CreatedDate" hidden/>
     <input asp-for="UserGroup.Code" hidden/>
+    <input asp-for="UserGroup.ImageUrl" hidden/>
     <div class="border p-3 mt-4">
         <div class="row pb-2">
             <h2 class="text-primary"></h2> 
@@ -11,8 +12,7 @@
         </div>
         <div class="mg-3 row p-1">
             <label asp-for="UserGroup.Description" class="p-0"></label>
-            <input asp-for="UserGroup.Description"  class="form-control"/>
-            <span asp-validation-for="UserGroup.Description" class="text-danger"></span>
+            <input asp-for="UserGroup.Description"  class="form-control"></input>
         </div>
         <div class="mg-3 row p-1">
             <label asp-for="UserGroup.MemberId" class="p-0"></label>
@@ -27,30 +27,42 @@
             <input type="file" name="file" class="form-control text-secondary"></input>
             
         </div>
-        <div class="row">
-            <div class="col-6">
-
-            </div>
-            <div >
-
+        <div class="mg-3 row p-1">
+            <div class="col-2">
+                <img src="@Model.UserGroup.ImageUrl" width="100%" style="border-radius:5px; border:1px solid #bf3fd9"
             </div>
         </div>
-        <a asp-controller="UserGroup" asp-action="Index" class="btn btn-secondary mt-4 btn-lg float-end" style="width:150px">
-            Back
-        </a>
-        @if(Model.UserGroup.Id != 0)
-        {
-            <button type="submit" class="btn btn-primary mt-4 btn-lg float-end form-control" style="width:150px">Update</button>
-        }
-        else
-        {
-            <button type="submit" class="btn btn-primary mt-4 btn-lg float-end form-control" style="width:150px">Add</button>
-        }
+        <div>
+            <a asp-controller="UserGroup" asp-action="Index" class="btn btn-secondary mt-4 btn-lg float-end" style="width:150px">
+                Back
+            </a>
+            @if(Model.UserGroup.Id != 0)
+            {
+                <button type="submit" class="btn btn-primary mt-4 btn-lg float-end form-control" style="width:150px">Update</button>
+            }
+            else
+            {
+                <button type="submit" class="btn btn-primary mt-4 btn-lg float-end form-control" style="width:150px">Add</button>
+            }
+        </div>
         
     </div>
 </form> 
 
 @section Scripts{
+@*    <script>     /// это была попытка прикрутить tinymce, но нафиг она тут не нужна в данном случае, а так прикольная тема (лепим textarea на нужный блок и вауля) (еще в _Layout'e надо скрипт прибубенить чтоб работало)
+    tinymce.init({
+      selector: 'textarea',
+      plugins: 'anchor autolink charmap codesample emoticons lists visualblocks wordcount checklist mediaembed casechange formatpainter pageembed a11ychecker tinymcespellchecker permanentpen powerpaste advtable advcode editimage tinycomments tableofcontents footnotes mergetags autocorrect typography inlinecss',
+      toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
+      tinycomments_mode: 'embedded',
+      tinycomments_author: 'Author name',
+      mergetags_list: [
+        { value: 'First.Name', title: 'First Name' },
+        { value: 'Email', title: 'Email' },
+      ]
+    });
+  </script>*@
     @{
     <partial name ="_ValidationScriptsPartial"/>
     }

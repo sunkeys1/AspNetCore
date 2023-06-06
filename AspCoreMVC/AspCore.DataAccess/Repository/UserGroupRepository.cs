@@ -20,7 +20,19 @@ namespace AspCore.DataAccess.Repository
 
         public void Update(UserGroup obj)
         {
-            _db.Update(obj);   // возможно сюда нужно еще добавить .UserGroup.
+            // _db.Update(obj);   // возможно сюда нужно еще добавить .UserGroup.   // заменяем простой апдейт на вот енто
+            var objFromDb = _db.UsersGroup.FirstOrDefault(u => u.Id == obj.Id);
+            if(objFromDb != null)
+            {
+                objFromDb.Description = obj.Description;
+                objFromDb.CreatedDate = obj.CreatedDate;
+                objFromDb.Code = obj.Code;
+                objFromDb.MemberId = obj.MemberId;
+                if(obj.ImageUrl != null)
+                {
+                    objFromDb.ImageUrl = obj.ImageUrl;
+                }
+            }
         }
     }
 }

@@ -21,7 +21,7 @@
                     UserGroup Description
                 </th>
                 <th class="table-primary">
-                    UserGroup Members
+                    UserGroup Member
                 </th>
                 <th class="table-danger">
                     UserGroup Created Date 
@@ -37,7 +37,7 @@
                 {
                     <tr>
                         <td>@obj.Description</td>
-                        <td>@obj.MemberId</td>
+                        <td>@obj.User.Login</td>
                         <td>@obj.CreatedDate</td>
                         <td>@obj.Code</td>
                         
