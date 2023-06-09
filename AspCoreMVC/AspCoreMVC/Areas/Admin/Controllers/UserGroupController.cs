@@ -177,5 +177,13 @@ namespace AspCoreMVC.Areas.Admin.Controllers
             return RedirectToAction("Index");
 
         }
+        #region
+        [HttpGet]
+        public IActionResult GetAll()
+        {
+            List<UserGroup> objUserGroupList = _unitOfWork.UserGroup.GetAll(includeProps: "User").ToList();
+            return Json(new { data = objUserGroupList } );
+        }
+        #endregion
     }
 }

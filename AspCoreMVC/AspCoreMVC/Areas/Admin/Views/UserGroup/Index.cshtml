@@ -14,10 +14,10 @@
         </div>
     </div>
 
-    <table class="table table-bordered table-striped">
+    <table id="tabData" class="table table-bordered table-striped" style="width:100%">
         <thead class="text-center">
             <tr>  
-                <th class="table-warning">
+                @*<th class="table-warning">
                     UserGroup Description
                 </th>
                 <th class="table-primary">
@@ -29,11 +29,16 @@
                 <th class="table-info">
                     State
                 </th>
-                <th></th>
+                <th></th>*@
+                <th>UG desc</th>
+                <th>UG mem</th>
+                <th>UG cd</th>
+                <th>state</th>
+                
             <tr/>
         </thead>
-            <tbody class="text-center">
-                @foreach(var obj in Model)
+            @*<tbody class="text-center">
+                @foreach(var obj in Model)    // больше не нужен форич тк будем выводить через data table
                 {
                     <tr>
                         <td>@obj.Description</td>
@@ -53,6 +58,10 @@
                         </td>
                     </tr>
                 }
-            </tbody> 
+            </tbody> *@
     </table>
 </div>
+
+@section Scripts{
+    <script src="~/js/usergroup.js"></script>
+}

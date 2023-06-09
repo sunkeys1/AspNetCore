@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "xG85HTKH+R91/oPJRU3t00NNF+bD+gGvW+cdo0y5wmU=",
+  "Hash": "UEgFzQpmCeqdiaZyKCIvYvtmI4OE+chMidSbqhQ9TH4=",
   "Source": "AspCoreMVC",
   "BasePath": "_content/AspCoreMVC",
   "Mode": "Default",
@@ -119,6 +119,40 @@
       "OriginalItemSpec": "wwwroot\\images\\usergroup\\a001d55b-f0c9-4c8d-aa3e-1d62b7eb9398.jpg"
     },
     {
+      "Identity": "G:\\AspNetCore\\AspCoreMVC\\AspCoreMVC\\wwwroot\\images\\usergroup\\a267f8c1-132f-42d4-b8d9-b9d2096dabbd.jpg",
+      "SourceId": "AspCoreMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "G:\\AspNetCore\\AspCoreMVC\\AspCoreMVC\\wwwroot\\",
+      "BasePath": "_content/AspCoreMVC",
+      "RelativePath": "images/usergroup/a267f8c1-132f-42d4-b8d9-b9d2096dabbd.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\usergroup\\a267f8c1-132f-42d4-b8d9-b9d2096dabbd.jpg"
+    },
+    {
+      "Identity": "G:\\AspNetCore\\AspCoreMVC\\AspCoreMVC\\wwwroot\\images\\usergroup\\a7e4f716-ae49-468f-89a6-47fb7270826a.png",
+      "SourceId": "AspCoreMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "G:\\AspNetCore\\AspCoreMVC\\AspCoreMVC\\wwwroot\\",
+      "BasePath": "_content/AspCoreMVC",
+      "RelativePath": "images/usergroup/a7e4f716-ae49-468f-89a6-47fb7270826a.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\usergroup\\a7e4f716-ae49-468f-89a6-47fb7270826a.png"
+    },
+    {
       "Identity": "G:\\AspNetCore\\AspCoreMVC\\AspCoreMVC\\wwwroot\\images\\usergroup\\d439a5a4-6c02-490b-8f97-28fe8e00d424.jpg",
       "SourceId": "AspCoreMVC",
       "SourceType": "Discovered",
@@ -151,6 +185,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\site.js"
+    },
+    {
+      "Identity": "G:\\AspNetCore\\AspCoreMVC\\AspCoreMVC\\wwwroot\\js\\usergroup.js",
+      "SourceId": "AspCoreMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "G:\\AspNetCore\\AspCoreMVC\\AspCoreMVC\\wwwroot\\",
+      "BasePath": "_content/AspCoreMVC",
+      "RelativePath": "js/usergroup.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\usergroup.js"
     },
     {
       "Identity": "G:\\AspNetCore\\AspCoreMVC\\AspCoreMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
