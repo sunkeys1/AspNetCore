@@ -184,6 +184,7 @@ namespace AspCoreMVC.Areas.Admin.Controllers
             List<UserGroup> objUserGroupList = _unitOfWork.UserGroup.GetAll(includeProps: "User").ToList();
             return Json(new { data = objUserGroupList } );
         }
+        [HttpDelete]
         public IActionResult Delete(int? id)
         {
             var userGroupDeleting = _unitOfWork.UserGroup.Get(u => u.Id == id);
@@ -191,13 +192,18 @@ namespace AspCoreMVC.Areas.Admin.Controllers
             {
                 return Json(new { success = false, message = "Error while deleting!" });
             }
-            var oldImgPath = 
-                Path.Combine(_webHostEnvironment.WebRootPath, 
-                userGroupDeleting.ImageUrl.TrimStart('\\'));
-            if (System.IO.File.Exists(oldImgPath))
+            if(userGroupDeleting.ImageUrl != null)
             {
-                System.IO.File.Delete(oldImgPath);
+                var oldImgPath =
+                Path.Combine(_webHostEnvironment.WebRootPath,
+                userGroupDeleting.ImageUrl.TrimStart('\\'));
+                if (System.IO.File.Exists(oldImgPath))
+                {
+                    System.IO.File.Delete(oldImgPath);
+                }
             }
+            
+            
             _unitOfWork.UserGroup.Delete(userGroupDeleting);
             _unitOfWork.Save();
             return Json(new { success = true, message = "Deleted Successfully" });
