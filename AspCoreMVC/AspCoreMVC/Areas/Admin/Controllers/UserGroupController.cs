@@ -148,41 +148,59 @@ namespace AspCoreMVC.Areas.Admin.Controllers
         //    return View();
         //}
 
-        public IActionResult Delete(int? id)
-        {
-            if (id == null || id == 0)
-            {
-                return NotFound();
-            }
-            UserGroup? userGroupFromDb = _unitOfWork.UserGroup.Get(u => u.Id == id);
+        //public IActionResult Delete(int? id)
+        //{
+        //    if (id == null || id == 0)
+        //    {
+        //        return NotFound();
+        //    }
+        //    UserGroup? userGroupFromDb = _unitOfWork.UserGroup.Get(u => u.Id == id);
 
-            if (userGroupFromDb == null)
-            {
-                return NotFound();
-            }
-            return View(userGroupFromDb);
-        }
-        [HttpPost, ActionName("Delete")]
-        public IActionResult DeletePOST(int? id)
-        {
-            UserGroup? obj = _unitOfWork.UserGroup.Get(u => u.Id == id);
-            if (obj == null)
-            {
-                NotFound();
-            }
+        //    if (userGroupFromDb == null)
+        //    {
+        //        return NotFound();
+        //    }
+        //    return View(userGroupFromDb);
+        //}
+        //[HttpPost, ActionName("Delete")]
+        //public IActionResult DeletePOST(int? id)
+        //{
+        //    UserGroup? obj = _unitOfWork.UserGroup.Get(u => u.Id == id);
+        //    if (obj == null)
+        //    {
+        //        NotFound();
+        //    }
 
-            _unitOfWork.UserGroup.Delete(obj);
-            _unitOfWork.Save();
-            TempData["success"] = "User Group deleted successfully";
-            return RedirectToAction("Index");
+        //    _unitOfWork.UserGroup.Delete(obj);
+        //    _unitOfWork.Save();
+        //    TempData["success"] = "User Group deleted successfully";
+        //    return RedirectToAction("Index");
 
-        }
+        //}
         #region
         [HttpGet]
         public IActionResult GetAll()
         {
             List<UserGroup> objUserGroupList = _unitOfWork.UserGroup.GetAll(includeProps: "User").ToList();
             return Json(new { data = objUserGroupList } );
+        }
+        public IActionResult Delete(int? id)
+        {
+            var userGroupDeleting = _unitOfWork.UserGroup.Get(u => u.Id == id);
+            if(userGroupDeleting == null)
+            {
+                return Json(new { success = false, message = "Error while deleting!" });
+            }
+            var oldImgPath = 
+                Path.Combine(_webHostEnvironment.WebRootPath, 
+                userGroupDeleting.ImageUrl.TrimStart('\\'));
+            if (System.IO.File.Exists(oldImgPath))
+            {
+                System.IO.File.Delete(oldImgPath);
+            }
+            _unitOfWork.UserGroup.Delete(userGroupDeleting);
+            _unitOfWork.Save();
+            return Json(new { success = true, message = "Deleted Successfully" });
         }
         #endregion
     }

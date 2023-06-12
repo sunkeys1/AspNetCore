@@ -15,12 +15,12 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = G:\AspNetCore\AspCoreMVC\AspCoreMVC
 build_property._RazorSourceGeneratorDebug = 
 
-[G:/AspNetCore/AspCoreMVC/AspCoreMVC/Areas/Admin/Views/UserGroup/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVXNlckdyb3VwXERlbGV0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [G:/AspNetCore/AspCoreMVC/AspCoreMVC/Areas/Admin/Views/UserGroup/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVXNlckdyb3VwXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/AspNetCore/AspCoreMVC/AspCoreMVC/Areas/Admin/Views/UserGroup/IndexOld.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVXNlckdyb3VwXEluZGV4T2xkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [G:/AspNetCore/AspCoreMVC/AspCoreMVC/Areas/Admin/Views/UserGroup/Upadd.cshtml]
