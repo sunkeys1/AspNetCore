@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "UEgFzQpmCeqdiaZyKCIvYvtmI4OE+chMidSbqhQ9TH4=",
+  "Hash": "ghDolcBkQd0789x/P16J0y89pq4UmCnS6vQP16dq3+4=",
   "Source": "AspCoreMVC",
   "BasePath": "_content/AspCoreMVC",
   "Mode": "Default",
@@ -102,6 +102,23 @@
       "OriginalItemSpec": "wwwroot\\images\\usergroup\\0fe5d255-5b8c-4cdd-b17c-e7ac9412d1ba.jpg"
     },
     {
+      "Identity": "G:\\AspNetCore\\AspCoreMVC\\AspCoreMVC\\wwwroot\\images\\usergroup\\81e726c2-57bc-42b8-a4fa-590029314aae.jpg",
+      "SourceId": "AspCoreMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "G:\\AspNetCore\\AspCoreMVC\\AspCoreMVC\\wwwroot\\",
+      "BasePath": "_content/AspCoreMVC",
+      "RelativePath": "images/usergroup/81e726c2-57bc-42b8-a4fa-590029314aae.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\usergroup\\81e726c2-57bc-42b8-a4fa-590029314aae.jpg"
+    },
+    {
       "Identity": "G:\\AspNetCore\\AspCoreMVC\\AspCoreMVC\\wwwroot\\images\\usergroup\\a001d55b-f0c9-4c8d-aa3e-1d62b7eb9398.jpg",
       "SourceId": "AspCoreMVC",
       "SourceType": "Discovered",
@@ -151,23 +168,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\usergroup\\a7e4f716-ae49-468f-89a6-47fb7270826a.png"
-    },
-    {
-      "Identity": "G:\\AspNetCore\\AspCoreMVC\\AspCoreMVC\\wwwroot\\images\\usergroup\\d439a5a4-6c02-490b-8f97-28fe8e00d424.jpg",
-      "SourceId": "AspCoreMVC",
-      "SourceType": "Discovered",
-      "ContentRoot": "G:\\AspNetCore\\AspCoreMVC\\AspCoreMVC\\wwwroot\\",
-      "BasePath": "_content/AspCoreMVC",
-      "RelativePath": "images/usergroup/d439a5a4-6c02-490b-8f97-28fe8e00d424.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\usergroup\\d439a5a4-6c02-490b-8f97-28fe8e00d424.jpg"
     },
     {
       "Identity": "G:\\AspNetCore\\AspCoreMVC\\AspCoreMVC\\wwwroot\\js\\site.js",

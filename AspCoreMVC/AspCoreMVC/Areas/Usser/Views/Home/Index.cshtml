@@ -1,8 +1,19 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
-
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+﻿@model IEnumerable<UserGroup>
+<div class="row">
+    @foreach(var userGroup in Model)
+    {
+        <div class="col-lg-3 col-sm-6 row">
+            <div class="row p-2">
+                <div class="col-12 p-1">
+                    <div class="card border-secondary p-3 rounded">
+                        <img src="@userGroup.ImageUrl" class="card-img-top rounded"/>
+                        <div>
+                            <p class="card-title h5 text-uppercase text-center p-2">@userGroup.Description</p>
+                            <p class="card-title text-danger text-center">@userGroup.User.Login</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
 </div>

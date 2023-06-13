@@ -1,9 +1,10 @@
 ﻿using AspCore.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace AspCore.DataAccess.Data
 {
-    public class ApplicationDbContext : DbContext
+    public class ApplicationDbContext : IdentityDbContext
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
@@ -13,6 +14,8 @@ namespace AspCore.DataAccess.Data
         public DbSet<UserGroup> UsersGroup { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder); // добавляем если используем IdentityDbContext
+
             modelBuilder.Entity<User>().HasData(
                 new User { Id = 1, Login = "boris2020", Password = "123boris123", Created = DateTime.Now.AddDays(-2), GroupId = 2, UserState = "Active"},
                 new User { Id = 2, Login = "superadmin", Password = "adminadmin1", Created = DateTime.Now.AddDays(-10), GroupId = 1, UserState = "Active" },
