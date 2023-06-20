@@ -24,3 +24,15 @@ G:\AspNetCore\AspCoreMVC\DependencyInjectionTest\obj\Debug\net6.0\refint\Depende
 G:\AspNetCore\AspCoreMVC\DependencyInjectionTest\obj\Debug\net6.0\DependencyInjectionTest.pdb
 G:\AspNetCore\AspCoreMVC\DependencyInjectionTest\obj\Debug\net6.0\DependencyInjectionTest.genruntimeconfig.cache
 G:\AspNetCore\AspCoreMVC\DependencyInjectionTest\obj\Debug\net6.0\ref\DependencyInjectionTest.dll
+G:\AspNetCore\AspCoreMVC\DependencyInjectionTest\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+G:\AspNetCore\AspCoreMVC\DependencyInjectionTest\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+G:\AspNetCore\AspCoreMVC\DependencyInjectionTest\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+G:\AspNetCore\AspCoreMVC\DependencyInjectionTest\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+G:\AspNetCore\AspCoreMVC\DependencyInjectionTest\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+G:\AspNetCore\AspCoreMVC\DependencyInjectionTest\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+G:\AspNetCore\AspCoreMVC\DependencyInjectionTest\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+G:\AspNetCore\AspCoreMVC\DependencyInjectionTest\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+G:\AspNetCore\AspCoreMVC\DependencyInjectionTest\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
+G:\AspNetCore\AspCoreMVC\DependencyInjectionTest\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
+G:\AspNetCore\AspCoreMVC\DependencyInjectionTest\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
+G:\AspNetCore\AspCoreMVC\DependencyInjectionTest\obj\Debug\net6.0\DependencyInjectionTest.csproj.CopyComplete
