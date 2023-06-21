@@ -1,12 +1,15 @@
 ﻿using AspCore.DataAccess.Data;
 using AspCore.DataAccess.Repository.IRepository;
 using AspCore.Models;
+using AspCore.Utility;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AspCore.Areas.AdminControllers
 {
 
     [Area("Admin")]
+    [Authorize(Roles = SD.Role_Admin)]
     public class UserController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;

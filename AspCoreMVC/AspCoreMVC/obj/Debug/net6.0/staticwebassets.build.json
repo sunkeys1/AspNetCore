@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "fQAINEakFXGBCvOv1dPuuci1hax2iuJcKe7h7VChoko=",
+  "Hash": "yj0LpvEKH9piJ3l/zNxErGZW4LZuJSXMWCyLU2s/MKc=",
   "Source": "AspCoreMVC",
   "BasePath": "_content/AspCoreMVC",
   "Mode": "Default",
@@ -1122,6 +1122,23 @@
       "OriginalItemSpec": "wwwroot\\images\\usergroup\\0fe5d255-5b8c-4cdd-b17c-e7ac9412d1ba.jpg"
     },
     {
+      "Identity": "G:\\AspNetCore\\AspCoreMVC\\AspCoreMVC\\wwwroot\\images\\usergroup\\456bdc3b-82be-4575-9be6-c9a99cf835d0.jpg",
+      "SourceId": "AspCoreMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "G:\\AspNetCore\\AspCoreMVC\\AspCoreMVC\\wwwroot\\",
+      "BasePath": "_content/AspCoreMVC",
+      "RelativePath": "images/usergroup/456bdc3b-82be-4575-9be6-c9a99cf835d0.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\usergroup\\456bdc3b-82be-4575-9be6-c9a99cf835d0.jpg"
+    },
+    {
       "Identity": "G:\\AspNetCore\\AspCoreMVC\\AspCoreMVC\\wwwroot\\images\\usergroup\\81e726c2-57bc-42b8-a4fa-590029314aae.jpg",
       "SourceId": "AspCoreMVC",
       "SourceType": "Discovered",
@@ -1188,6 +1205,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\usergroup\\a7e4f716-ae49-468f-89a6-47fb7270826a.png"
+    },
+    {
+      "Identity": "G:\\AspNetCore\\AspCoreMVC\\AspCoreMVC\\wwwroot\\images\\usergroup\\aee202f5-e0e7-4f28-97ed-3c05a3c99c8c.png",
+      "SourceId": "AspCoreMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "G:\\AspNetCore\\AspCoreMVC\\AspCoreMVC\\wwwroot\\",
+      "BasePath": "_content/AspCoreMVC",
+      "RelativePath": "images/usergroup/aee202f5-e0e7-4f28-97ed-3c05a3c99c8c.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\usergroup\\aee202f5-e0e7-4f28-97ed-3c05a3c99c8c.png"
+    },
+    {
+      "Identity": "G:\\AspNetCore\\AspCoreMVC\\AspCoreMVC\\wwwroot\\images\\usergroup\\d0c91d7d-542d-470c-9d7f-c6395625082f.jpg",
+      "SourceId": "AspCoreMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "G:\\AspNetCore\\AspCoreMVC\\AspCoreMVC\\wwwroot\\",
+      "BasePath": "_content/AspCoreMVC",
+      "RelativePath": "images/usergroup/d0c91d7d-542d-470c-9d7f-c6395625082f.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\usergroup\\d0c91d7d-542d-470c-9d7f-c6395625082f.jpg"
     },
     {
       "Identity": "G:\\AspNetCore\\AspCoreMVC\\AspCoreMVC\\wwwroot\\js\\site.js",

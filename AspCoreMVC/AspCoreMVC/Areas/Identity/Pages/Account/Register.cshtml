@@ -27,6 +27,11 @@
                 <input asp-for="Input.ConfirmPassword" class="form-control" autocomplete="new-password" aria-required="true" />
                 <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
             </div>
+            <div class="mt-3">
+                <select asp-for="Input.Role" asp-items="@Model.Input.RoleList" class="form-select">
+                <option disabled selected>--Select Role--</option>
+            </select>
+            </div>
             <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-primary mt-3">Register</button>
         </form>
     </div>

@@ -1,6 +1,8 @@
 ﻿using AspCore.DataAccess.Repository.IRepository;
 using AspCore.Models;
 using AspCore.Models.ViewModels;
+using AspCore.Utility;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Collections.Generic;
@@ -8,6 +10,7 @@ using System.Collections.Generic;
 namespace AspCoreMVC.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = SD.Role_Admin)]
     public class UserGroupController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
